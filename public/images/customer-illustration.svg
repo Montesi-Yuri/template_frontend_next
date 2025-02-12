@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" fill="none">
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+  
+  <!-- Sfondo luminoso circolare -->
+  <circle cx="400" cy="350" r="250" fill="url(#glow)" />
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#F8FAFC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Sfondo con nuvole fisse -->
+  <g opacity="0.1">
+    <!-- Nuvola grande sinistra -->
+    <path d="M100 250 
+             C 120 230, 150 230, 170 250 
+             C 190 230, 220 230, 240 250
+             C 240 270, 170 270, 170 270
+             C 170 270, 100 270, 100 250" 
+          fill="#94A3B8"/>
+    
+    <!-- Nuvola media destra -->
+    <path d="M550 180
+             C 570 160, 600 160, 620 180
+             C 640 160, 660 160, 680 180
+             C 680 200, 620 200, 620 200
+             C 620 200, 550 200, 550 180"
+          fill="#94A3B8"/>
+    
+    <!-- Nuvola piccola centro -->
+    <path d="M400 100
+             C 420 80, 440 80, 460 100
+             C 480 80, 500 80, 520 100
+             C 520 120, 460 120, 460 120
+             C 460 120, 400 120, 400 100"
+          fill="#94A3B8"/>
+  </g>
+  
+  <g class="floating">
+    <!-- Base del negozio -->
+    <rect x="250" y="200" width="300" height="250" fill="#94A3B8" rx="8"/>
+    
+    <!-- Facciata principale -->
+    <rect x="250" y="200" width="300" height="200" fill="#E2E8F0" rx="8"/>
+    
+    <!-- Tetto -->
+    <path d="M230 200 L400 120 L570 200" fill="#475569" stroke="#475569" stroke-width="2"/>
+    
+    <!-- Porta -->
+    <rect x="370" y="300" width="60" height="100" fill="#334155" rx="4"/>
+    <circle cx="420" cy="350" r="3" fill="#94A3B8"/> <!-- Maniglia -->
+    
+    <!-- Finestre -->
+    <rect x="280" y="240" width="60" height="40" fill="#CBD5E1" rx="4"/>
+    <rect x="460" y="240" width="60" height="40" fill="#CBD5E1" rx="4"/>
+    
+    <!-- Insegna -->
+    <rect x="320" y="160" width="160" height="30" fill="#3B82F6" rx="4"/>
+    <text x="400" y="180" text-anchor="middle" fill="white" font-family="Arial" font-size="16">STORE</text>
+    
+    <!-- Decorazioni -->
+    <rect x="250" y="450" width="300" height="10" fill="#64748B"/> <!-- Base/Marciapiede -->
+    <rect x="230" y="200" width="340" height="5" fill="#64748B"/> <!-- Bordo tetto -->
+  </g>
+</svg> 
